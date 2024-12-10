@@ -20,15 +20,13 @@ class _ScheduleCardState extends State<ScheduleCard> {
             MaterialPageRoute(
                 builder: (context) => ScorePage(
                       sched: widget.schedule,
-                    )
-            )
-        );
+                    )));
       },
-      child:Padding(
+      child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
         child: Container(
-          width: 350.0,
-          height: 188.0,
+          width: 416.0,
+          height: 165.0,
           decoration: BoxDecoration(
             color: Color(0xE3C2E8FF),
             boxShadow: [
@@ -57,7 +55,8 @@ class _ScheduleCardState extends State<ScheduleCard> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 2.0, 0.0),
                             child: Text(
                               'Match',
                               textAlign: TextAlign.center,
@@ -100,23 +99,26 @@ class _ScheduleCardState extends State<ScheduleCard> {
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
+                Padding(
+                  padding: EdgeInsets.only(top:10.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           width: 80.0,
                           height: 80.0,
+                          //padding: EdgeInsets.only(top: 10.0),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           child: Image.asset(
-                            "assets/${widget.schedule['Team1']}.png",  
-                           width: 80.0,
+                            "assets/${widget.schedule['Team1']}.png",
+                            width: 80.0,
                             height: 80.0,
                             fit: BoxFit.contain,
                           ),
@@ -132,56 +134,56 @@ class _ScheduleCardState extends State<ScheduleCard> {
                       ],
                     ),
                     Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          '${widget.schedule['Score1']} - ${widget.schedule['Score2']}',
-                          style: TextStyle(
-                            fontFamily: 'Inter Tight',
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            '${widget.schedule['Score1']} - ${widget.schedule['Score2']}',
+                            style: TextStyle(
+                              fontFamily: 'Inter Tight',
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'FT',
-                          style: TextStyle(
-                            fontFamily: 'Inter',
-                            color: Colors.grey[600],
+                          Text(
+                            'FT',
+                            style: TextStyle(
+                              fontFamily: 'Inter',
+                              color: Colors.grey[600],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 80.0,
-                          height: 80.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          
-                          child: Image.asset(
-                            'assets/${widget.schedule['Team2']}.png', // Replace with actual team logo URL
+                        ],
+                      ),
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
                             width: 80.0,
                             height: 80.0,
-                            fit: BoxFit.contain,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Image.asset(
+                              'assets/${widget.schedule['Team2']}.png', // Replace with actual team logo URL
+                              width: 80.0,
+                              height: 80.0,
+                              fit: BoxFit.contain,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '${widget.schedule['Team2']}',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
+                          Text(
+                            '${widget.schedule['Team2']}',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                        ],
+                      ),
+                    ],
+                  ),
+            ),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
