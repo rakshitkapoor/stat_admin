@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stat_admin/login_page.dart';
 import 'package:stat_admin/score_page.dart';
 
 class ScheduleCard extends StatefulWidget {
@@ -100,40 +101,40 @@ class _ScheduleCardState extends State<ScheduleCard> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top:10.0),
+                  padding: EdgeInsets.only(top: 10.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 80.0,
-                          height: 80.0,
-                          //padding: EdgeInsets.only(top: 10.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          child: Image.asset(
-                            "assets/${widget.schedule['Team1']}.png",
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
                             width: 80.0,
                             height: 80.0,
-                            fit: BoxFit.contain,
+                            //padding: EdgeInsets.only(top: 10.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Image.asset(
+                              "assets/${widget.schedule['Team1']}.png",
+                              width: 80.0,
+                              height: 80.0,
+                              fit: BoxFit.contain,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '${widget.schedule['Team1']}',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
+                          Text(
+                            '${widget.schedule['Team1']}',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Column(
+                        ],
+                      ),
+                      Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -183,7 +184,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
                       ),
                     ],
                   ),
-            ),
+                ),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
