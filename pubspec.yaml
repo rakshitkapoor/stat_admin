@@ -81,7 +81,7 @@ flutter:
     - assets/Saint Gobain.png
     - assets/Teleperformance.png
     - assets/Hapag Lloyd.png
-    - assests/stat_font_black.png
+    - assets/stat_font_black.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
