@@ -114,7 +114,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                       foregroundColor: Colors.black,
                                       textStyle: TextStyle(
                                         fontFamily: 'Poppins',
-                                        fontSize: 10.0,
+                                        fontSize: 5.0,
                                         letterSpacing: 0.0,
                                       ),
                                       minimumSize: Size(89.0, 76.0),
@@ -196,7 +196,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpA[0]["D"]}",
                                 "${grpA[0]["L"]}",
                                 "${grpA[0]["GF"]}",
-                                "${grpA[0]["GA"]}",
+                                "${grpA[2]["GA"]}",
                                 "${grpA[0]["GD"]}",
                                 "${grpA[0]["Pts"]}"
                               ],
