@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:stat_admin/Widgets/groupWidget.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -70,7 +72,7 @@ class _PointsScreenState extends State<PointsScreen> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
-                                  'stat_font_black.png',
+                                  'assets/stat_font_black.png',
                                   width: 170.0,
                                   height: 70.0,
                                   fit: BoxFit.cover,
@@ -196,7 +198,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpA[0]["D"]}",
                                 "${grpA[0]["L"]}",
                                 "${grpA[0]["GF"]}",
-                                "${grpA[2]["GA"]}",
+                                "${grpA[0]["GA"]}",
                                 "${grpA[0]["GD"]}",
                                 "${grpA[0]["Pts"]}"
                               ],
@@ -219,7 +221,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpA[2]["L"]}",
                                 "${grpA[2]["GF"]}",
                                 "${grpA[2]["GA"]}",
-                                "${grpA[0]["GD"]}",
+                                "${grpA[2]["GD"]}",
                                 "${grpA[2]["Pts"]}"
                               ],
                             ]),
@@ -254,7 +256,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpB[2]["L"]}",
                                 "${grpB[2]["GF"]}",
                                 "${grpB[2]["GA"]}",
-                                "${grpB[0]["GD"]}",
+                                "${grpB[2]["GD"]}",
                                 "${grpB[2]["Pts"]}"
                               ],
                             ]),
@@ -289,7 +291,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpC[2]["L"]}",
                                 "${grpC[2]["GF"]}",
                                 "${grpC[2]["GA"]}",
-                                "${grpC[0]["GD"]}",
+                                "${grpC[2]["GD"]}",
                                 "${grpC[2]["Pts"]}"
                               ],
                             ]),
@@ -324,7 +326,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpD[2]["L"]}",
                                 "${grpD[2]["GF"]}",
                                 "${grpD[2]["GA"]}",
-                                "${grpD[0]["GD"]}",
+                                "${grpD[2]["GD"]}",
                                 "${grpD[2]["Pts"]}"
                               ],
                             ]),
@@ -359,7 +361,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpE[2]["L"]}",
                                 "${grpE[2]["GF"]}",
                                 "${grpE[2]["GA"]}",
-                                "${grpE[0]["GD"]}",
+                                "${grpE[2]["GD"]}",
                                 "${grpE[2]["Pts"]}"
                               ],
                             ]),
@@ -394,7 +396,7 @@ class _PointsScreenState extends State<PointsScreen> {
                                 "${grpF[2]["L"]}",
                                 "${grpF[2]["GF"]}",
                                 "${grpF[2]["GA"]}",
-                                "${grpF[0]["GD"]}",
+                                "${grpF[2]["GD"]}",
                                 "${grpF[2]["Pts"]}"
                               ],
                             ]),
@@ -406,7 +408,91 @@ class _PointsScreenState extends State<PointsScreen> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          resetData();
+        },
+        child: Icon(Icons.delete),
+      ),
     );
+  }
+
+
+  Future resetData() async {
+    
+
+    final resA = await supabase.from('GroupA').update({
+      'MP': 0,
+      'W': 0,
+      'D': 0,
+      'L': 0,
+      'GF': 0,
+      'GA': 0,
+      'GD': 0,
+      'Pts': 0,
+    }).neq('Name', '');
+    print(resA);
+
+
+    final resB = await supabase.from('GroupB').update({
+      'MP': 0,
+      'W': 0,
+      'D': 0,
+      'L': 0,
+      'GF': 0,
+      'GA': 0,
+      'GD': 0,
+      'Pts': 0,
+    }).neq('Name', '');
+    print(resB);
+
+    final resC = await supabase.from('GroupC').update({
+      'MP': 0,
+      'W': 0,
+      'D': 0,
+      'L': 0,
+      'GF': 0,
+      'GA': 0,
+      'GD': 0,
+      'Pts': 0,
+    }).neq('Name', '');
+    print(resC);
+
+    final resD = await supabase.from('GroupD').update({
+      'MP': 0,
+      'W': 0,
+      'D': 0,
+      'L': 0,
+      'GF': 0,
+      'GA': 0,
+      'GD': 0,
+      'Pts': 0,
+    }).neq('Name', '');
+    print(resD);
+
+    final resE = await supabase.from('GroupE').update({
+      'MP': 0,
+      'W': 0,
+      'D': 0,
+      'L': 0,
+      'GF': 0,
+      'GA': 0,
+      'GD': 0,
+      'Pts': 0,
+    }).neq('Name', '');
+    print(resE);
+
+    final resF = await supabase.from('GroupF').update({
+      'MP': 0,
+      'W': 0,
+      'D': 0,
+      'L': 0,
+      'GF': 0,
+      'GA': 0,
+      'GD': 0,
+      'Pts': 0,
+    }).neq('Name', '');
+    print(resF);
   }
 
   Future fetchResult() async {
