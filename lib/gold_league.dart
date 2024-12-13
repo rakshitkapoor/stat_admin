@@ -3,14 +3,15 @@ import 'package:lottie/lottie.dart';
 import 'package:stat_admin/Widgets/card_widget.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class GoldLeague extends StatefulWidget {
+  const GoldLeague({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<GoldLeague> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+
+class _HomePageState extends State<GoldLeague> {
   final supabase = Supabase.instance.client;
 
   @override
@@ -20,16 +21,23 @@ class _HomePageState extends State<HomePage> {
     fetchResult();
   }
 
-  List<Map<String, dynamic>> scheduleData = [];
 
+
+  List<Map<String, dynamic>> scheduleData = [];
   @override
   Widget build(BuildContext context) {
     final screenSize=MediaQuery.of(context).size;
     return Scaffold(
       body: RefreshIndicator(
-        onRefresh: fetchResult,
+        onRefresh: () async {
+          setState(() {});
+        },
         child: Column(
           children: [
+            supabase.auth.currentUser!=null ?
+            OutlinedButton(onPressed: (){
+              // Gold league ka logic here 
+            }, child: Text("Generate Fixtures")): Container(),
             Expanded(
               child: (scheduleData.isEmpty)
                   ? Center(
@@ -42,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                   : Padding(
                     padding: EdgeInsets.only(bottom: screenSize.height*0.05),
                     child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
+                        physics: BouncingScrollPhysics(),
                         itemCount: scheduleData.length,
                         itemBuilder: (context, index) {
                           return ScheduleCard(schedule: scheduleData[index]);
@@ -55,9 +63,9 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
+  
   Future fetchResult() async {
-    final response = await supabase.from('Schedule').select();
+    final response = await supabase.from('goldleaguefixture').select();
     print(response);
 
     setState(() {

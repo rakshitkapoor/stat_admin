@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:stat_admin/home_page.dart';
-import 'package:stat_admin/login_page.dart';
-import 'package:stat_admin/points_screen.dart';
+import 'package:stat_admin/main_dashboard.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.interTightTextTheme(),
       ),
-      home: HomePage(),
+      home: Dashboard(),
     );
   }
 }

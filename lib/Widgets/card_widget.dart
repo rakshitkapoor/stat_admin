@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stat_admin/login_page.dart';
+import 'package:lottie/lottie.dart';
 import 'package:stat_admin/score_page.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ScheduleCard extends StatefulWidget {
   const ScheduleCard({super.key, required this.schedule});
@@ -11,17 +12,48 @@ class ScheduleCard extends StatefulWidget {
 }
 
 class _ScheduleCardState extends State<ScheduleCard> {
+  final supabase = Supabase.instance.client;
   @override
   Widget build(BuildContext context) {
     print("${widget.schedule}");
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => ScorePage(
-                      sched: widget.schedule,
-                    )));
+        supabase.auth.currentUser != null
+            ? Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ScorePage(
+                    sched: widget.schedule,
+                  ),
+                ),
+              )
+            : showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: const Text(
+                      'Access Denied',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                    content: const Text(
+                      'Admin access required to edit score',
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: [
+                      TextButton(
+                        child: const Text('OK'),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  );
+                },
+              );
       },
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
@@ -117,12 +149,15 @@ class _ScheduleCardState extends State<ScheduleCard> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: Image.asset(
-                              "assets/${widget.schedule['Team1']}.png",
-                              width: 80.0,
-                              height: 80.0,
-                              fit: BoxFit.contain,
-                            ),
+                            child: widget.schedule["Team1"] == "TBD"
+                                ? Lottie.network(
+                                    "https://lottie.host/6cbc1db1-f63f-4bd2-91c6-ea0b05333b5f/XpYiKXYreE.json")
+                                : Image.asset(
+                                    "assets/${widget.schedule['Team1']}.png",
+                                    width: 80.0,
+                                    height: 80.0,
+                                    fit: BoxFit.contain,
+                                  ),
                           ),
                           Text(
                             '${widget.schedule['Team1']}',
@@ -165,12 +200,15 @@ class _ScheduleCardState extends State<ScheduleCard> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: Image.asset(
-                              'assets/${widget.schedule['Team2']}.png', // Replace with actual team logo URL
-                              width: 80.0,
-                              height: 80.0,
-                              fit: BoxFit.contain,
-                            ),
+                            child: widget.schedule["Team1"] == "TBD"
+                                ? Lottie.network(
+                                    "https://lottie.host/6cbc1db1-f63f-4bd2-91c6-ea0b05333b5f/XpYiKXYreE.json")
+                                : Image.asset(
+                                    'assets/${widget.schedule['Team2']}.png', // Replace with actual team logo URL
+                                    width: 80.0,
+                                    height: 80.0,
+                                    fit: BoxFit.contain,
+                                  ),
                           ),
                           Text(
                             '${widget.schedule['Team2']}',

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:stat_admin/score_page.dart';
-import 'package:stat_admin/Widgets/card_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -31,13 +28,7 @@ class _LoginPageState extends State<LoginPage> {
 
       // If sign-in is successful, navigate to HomePage
       if (response.user != null) {
-        /*Navigator.pushReplacement(
-          /*context,
-          MaterialPageRoute(
-              builder: (context) => ScorePage(
-                    sched: widget.sched,
-                  )),
-        */);*/
+        Navigator.pop(context);
       } else {
         // Show error if no user is returned
         ScaffoldMessenger.of(context).showSnackBar(
