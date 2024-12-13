@@ -31,7 +31,7 @@ class _ScorePageState extends State<ScorePage> {
     try {
       // Update the specific row in the Schedule table
       // Assuming you want to match the row by Team1 and Team2 names
-      final response = await _supabase
+      await _supabase
           .from('Schedule')
           .update({
             'Score1': int.parse(_scoreController1.text),
