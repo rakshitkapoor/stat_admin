@@ -1,0 +1,34 @@
+com.example.stat_admin.app-jetified-activity-1.8.1-0 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/0791fa65669f61f3dce3bd59bff51722/transformed/jetified-activity-1.8.1/res
+com.example.stat_admin.app-jetified-tracing-1.2.0-1 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/2660533cb57badb90445514e013d8efe/transformed/jetified-tracing-1.2.0/res
+com.example.stat_admin.app-fragment-1.7.1-2 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/327e1aa894b508e27215c8250a5f3ed0/transformed/fragment-1.7.1/res
+com.example.stat_admin.app-jetified-core-ktx-1.13.1-3 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/4bfd75b2588a26792249a39aa0469a61/transformed/jetified-core-ktx-1.13.1/res
+com.example.stat_admin.app-lifecycle-livedata-core-2.7.0-4 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/57e90f3aa772ad43ece33d0a73344387/transformed/lifecycle-livedata-core-2.7.0/res
+com.example.stat_admin.app-jetified-savedstate-1.2.1-5 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/5e379b11f0ac2660713ad6fb1e493f86/transformed/jetified-savedstate-1.2.1/res
+com.example.stat_admin.app-jetified-lifecycle-process-2.7.0-6 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/60d4d4adea290c488351362a7cb153cc/transformed/jetified-lifecycle-process-2.7.0/res
+com.example.stat_admin.app-jetified-profileinstaller-1.3.1-7 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/65d0db89229d83cd3ec57bf704626868/transformed/jetified-profileinstaller-1.3.1/res
+com.example.stat_admin.app-jetified-window-java-1.2.0-8 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/66cc83964e810f51c1e785c07b39099f/transformed/jetified-window-java-1.2.0/res
+com.example.stat_admin.app-lifecycle-viewmodel-2.7.0-9 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/682185f940c9a193db1e4672c148d7f3/transformed/lifecycle-viewmodel-2.7.0/res
+com.example.stat_admin.app-core-runtime-2.2.0-10 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/80eed9b711da5f7209fc3f040dc0972f/transformed/core-runtime-2.2.0/res
+com.example.stat_admin.app-jetified-core-1.0.0-11 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/866feb9bf62b7786a72cfc91f8f307e3/transformed/jetified-core-1.0.0/res
+com.example.stat_admin.app-core-1.13.1-12 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/86ff0a56fcc88f06f3bc9440d4b7dea7/transformed/core-1.13.1/res
+com.example.stat_admin.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-13 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/91cb5ef543fd9b1bf0d5b5f543f53a39/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/res
+com.example.stat_admin.app-jetified-lifecycle-livedata-core-ktx-2.7.0-14 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/95c447c484dd5f901a0324a4e68f1ff7/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/res
+com.example.stat_admin.app-lifecycle-runtime-2.7.0-15 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/acee04c8a5369c18c6e70d300491f09f/transformed/lifecycle-runtime-2.7.0/res
+com.example.stat_admin.app-lifecycle-livedata-2.7.0-16 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/c3a4b156d9a43ad8b0de5ec3ba164c50/transformed/lifecycle-livedata-2.7.0/res
+com.example.stat_admin.app-jetified-window-1.2.0-17 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/ca02953a4730a642cb76d1934fd61ef0/transformed/jetified-window-1.2.0/res
+com.example.stat_admin.app-browser-1.8.0-18 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/dee721042f103d88dca266c4ab204a9f/transformed/browser-1.8.0/res
+com.example.stat_admin.app-jetified-annotation-experimental-1.4.0-19 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/f14259fdc6baaa7c2cb63114b21e030b/transformed/jetified-annotation-experimental-1.4.0/res
+com.example.stat_admin.app-jetified-datastore-preferences-1.0.0-20 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/f3e7ba5379091ad01ff2841541ec4b87/transformed/jetified-datastore-preferences-1.0.0/res
+com.example.stat_admin.app-jetified-datastore-1.0.0-21 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/f7e7f7237f899064c4c509ff7c1c208c/transformed/jetified-datastore-1.0.0/res
+com.example.stat_admin.app-jetified-startup-runtime-1.1.1-22 /Users/kshitizkapoor/.gradle/caches/8.10.2/transforms/ff235c07f543f23a71dc0b1c80bca28b/transformed/jetified-startup-runtime-1.1.1/res
+com.example.stat_admin.app-debug-23 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/android/app/src/debug/res
+com.example.stat_admin.app-main-24 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/android/app/src/main/res
+com.example.stat_admin.app-pngs-25 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/app/generated/res/pngs/debug
+com.example.stat_admin.app-resValues-26 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/app/generated/res/resValues/debug
+com.example.stat_admin.app-packageDebugResources-27 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/app/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.example.stat_admin.app-packageDebugResources-28 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/app/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.example.stat_admin.app-debug-29 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/app/intermediates/merged_res/debug/mergeDebugResources
+com.example.stat_admin.app-debug-30 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/app_links/intermediates/packaged_res/debug/packageDebugResources
+com.example.stat_admin.app-debug-31 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/path_provider_android/intermediates/packaged_res/debug/packageDebugResources
+com.example.stat_admin.app-debug-32 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/shared_preferences_android/intermediates/packaged_res/debug/packageDebugResources
+com.example.stat_admin.app-debug-33 /Users/kshitizkapoor/Documents/FlutterDev/Flutter Projects/stat_admin/build/url_launcher_android/intermediates/packaged_res/debug/packageDebugResources
