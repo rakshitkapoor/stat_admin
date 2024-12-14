@@ -7,6 +7,7 @@ class ScorePage extends StatefulWidget {
       {super.key, required this.sched, required this.redirectSource});
   final Map<String, dynamic> sched;
   final String redirectSource;
+
   @override
   State<ScorePage> createState() => _ScorePageState();
 }
@@ -54,8 +55,8 @@ class _ScorePageState extends State<ScorePage> {
       await _supabase
           .from(tableName)
           .update({
-            'Score1': int.parse(_scoreController1.text),
-            'Score2': int.parse(_scoreController2.text),
+            'Score1': _scoreController1.text,
+            'Score2': _scoreController2.text,
           })
           .eq('Team1', widget.sched['Team1'])
           .eq('Team2', widget.sched['Team2']);
@@ -125,7 +126,12 @@ class _ScorePageState extends State<ScorePage> {
                     child: TextField(
                       controller: _scoreController1,
                       keyboardType: TextInputType.number,
-                      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                      inputFormatters: widget.redirectSource == 'home'
+                          ? [FilteringTextInputFormatter.digitsOnly]
+                          : [
+                              FilteringTextInputFormatter.allow(
+                                  RegExp(r'[0-9()]'))
+                            ],
                       decoration: InputDecoration(
                         hintText: 'Score for ${widget.sched['Team1']}',
                         border: OutlineInputBorder(
@@ -143,7 +149,12 @@ class _ScorePageState extends State<ScorePage> {
                     child: TextField(
                       controller: _scoreController2,
                       keyboardType: TextInputType.number,
-                      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                      inputFormatters: widget.redirectSource == 'home'
+                          ? [FilteringTextInputFormatter.digitsOnly]
+                          : [
+                              FilteringTextInputFormatter.allow(
+                                  RegExp(r'[0-9()]'))
+                            ],
                       decoration: InputDecoration(
                         hintText: 'Score for ${widget.sched['Team2']}',
                         border: OutlineInputBorder(

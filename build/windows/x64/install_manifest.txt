@@ -5,7 +5,7 @@ E:/stat/stat_admin/build/windows/x64/runner/Debug/url_launcher_windows_plugin.dl
 E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
 E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
 E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
-E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/assets/AD%20Factors%20Blue.png
+E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/assets/ADfactors%20Blue.png
 E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/assets/ADfactors%20Orange.png
 E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/assets/Cathay%20Pacific%20Airlines.png
 E:/stat/stat_admin/build/windows/x64/runner/Debug/data/flutter_assets/assets/Citi%20bank.png
