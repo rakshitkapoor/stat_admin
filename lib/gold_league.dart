@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:stat_admin/Widgets/card_widget.dart';
+import 'package:stat_admin/Widgets/card_widget_gold.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class GoldLeague extends StatefulWidget {
@@ -60,9 +60,7 @@ class _HomePageState extends State<GoldLeague> {
           children: [
             supabase.auth.currentUser != null
                 ? OutlinedButton(
-                    onPressed: () {
-                      // Gold league ka logic here
-                    },
+                    onPressed: triggerFixtures,
                     child: Text("Generate Fixtures"))
                 : Container(),
             Expanded(
@@ -81,7 +79,8 @@ class _HomePageState extends State<GoldLeague> {
                         physics: BouncingScrollPhysics(),
                         itemCount: scheduleData.length,
                         itemBuilder: (context, index) {
-                          return ScheduleCard(schedule: scheduleData[index]);
+                          return ScheduleCardGold(
+                              schedule: scheduleData[index]);
                         },
                       ),
                     ),

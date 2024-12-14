@@ -24,6 +24,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
                 MaterialPageRoute(
                   builder: (context) => ScorePage(
                     sched: widget.schedule,
+                    redirectSource: 'home',
                   ),
                 ),
               )
@@ -59,7 +60,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
         child: Container(
           width: 416.0,
-          height: 165.0,
+          height: 185.0,
           decoration: BoxDecoration(
             color: Color(0xE3C2E8FF),
             boxShadow: [
@@ -95,7 +96,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontFamily: 'Poppins',
-                                fontSize: 10.0,
+                                fontSize: 14.0,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -106,7 +107,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               color: Colors.grey[600],
-                              fontSize: 10.0,
+                              fontSize: 14.0,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -117,8 +118,8 @@ class _ScheduleCardState extends State<ScheduleCard> {
                       '${widget.schedule['Time']}',
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 10.0,
-                        fontWeight: FontWeight.w500,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(
@@ -126,7 +127,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 10.0,
+                        fontSize: 14.0,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -231,7 +232,8 @@ class _ScheduleCardState extends State<ScheduleCard> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 13.0,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     Text(
@@ -239,8 +241,8 @@ class _ScheduleCardState extends State<ScheduleCard> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 10.0,
-                        fontWeight: FontWeight.w500,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w300,
                       ),
                     ),
                   ],

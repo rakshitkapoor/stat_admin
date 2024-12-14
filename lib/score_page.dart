@@ -3,8 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ScorePage extends StatefulWidget {
-  const ScorePage({super.key, required this.sched});
+  const ScorePage(
+      {super.key, required this.sched, required this.redirectSource});
   final Map<String, dynamic> sched;
+  final String redirectSource;
   @override
   State<ScorePage> createState() => _ScorePageState();
 }
@@ -29,10 +31,28 @@ class _ScorePageState extends State<ScorePage> {
     });
 
     try {
-      // Update the specific row in the Schedule table
-      // Assuming you want to match the row by Team1 and Team2 names
+      // Determine the table to update based on redirectSource
+      String tableName;
+      switch (widget.redirectSource) {
+        case 'gold':
+          tableName = 'goldleaguefixture';
+          break;
+        case 'silver':
+          tableName = 'silverleaguefixture';
+          break;
+        case 'bronze':
+          tableName = 'bronzeleaguefixture';
+          break;
+        case 'home':
+          tableName = 'Schedule';
+          break;
+        default:
+          throw Exception('Invalid redirect source');
+      }
+
+      // Update the specific row in the appropriate table
       await _supabase
-          .from('Schedule')
+          .from(tableName)
           .update({
             'Score1': int.parse(_scoreController1.text),
             'Score2': int.parse(_scoreController2.text),
@@ -40,11 +60,14 @@ class _ScorePageState extends State<ScorePage> {
           .eq('Team1', widget.sched['Team1'])
           .eq('Team2', widget.sched['Team2']);
 
-      // Check if update was successful
+      // Show success message
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Scores updated successfully for ${widget.sched['Team1']} vs ${widget.sched['Team2']}')),
+        SnackBar(
+            content: Text(
+                'Scores updated successfully for ${widget.sched['Team1']} vs ${widget.sched['Team2']} in $tableName')),
       );
-      // Optionally, you can navigate back or reset the form
+
+      // Navigate back or reset the form
       Navigator.of(context).pop();
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -77,14 +100,16 @@ class _ScorePageState extends State<ScorePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    "${widget.sched['Team1']}",
-                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w600)
-                  ),
-                  Text(
-                    "${widget.sched['Team2']}",
-                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w600)
-                  ),
+                  Text("${widget.sched['Team1']}",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(fontWeight: FontWeight.w600)),
+                  Text("${widget.sched['Team2']}",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(fontWeight: FontWeight.w600)),
                 ],
               ),
             ),
@@ -142,12 +167,12 @@ class _ScorePageState extends State<ScorePage> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: _isLoading 
-                  ? const CircularProgressIndicator()
-                  : const Text(
-                      'Submit Score',
-                      style: TextStyle(fontSize: 16),
-                    ),
+                child: _isLoading
+                    ? const CircularProgressIndicator()
+                    : const Text(
+                        'Submit Score',
+                        style: TextStyle(fontSize: 16),
+                      ),
               ),
             ),
           ],
