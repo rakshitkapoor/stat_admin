@@ -1,5 +1,3 @@
-//import 'dart:nativewrappers/_internal/vm/lib/ffi_allocation_patch.dart';
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:stat_admin/Widgets/card_widget.dart';
@@ -62,10 +60,8 @@ class _HomePageState extends State<GoldLeague> {
           children: [
             supabase.auth.currentUser != null
                 ? OutlinedButton(
-                    onPressed: () async {
-                      print(
-                          'Generating fixtures...'); // Add print statement for debugging
-                      await triggerFixtures();
+                    onPressed: () {
+                      // Gold league ka logic here
                     },
                     child: Text("Generate Fixtures"))
                 : Container(),
