@@ -1,0 +1,10 @@
+^E:\STAT\STAT_ADMIN\BUILD\WINDOWS\X64\CMAKEFILES\84D32582E1968FDA53327CCC438625EB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/stat/stat_admin/windows -BE:/stat/stat_admin/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/stat/stat_admin/build/windows/x64/stat_admin.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
